@@ -26,6 +26,15 @@ class DatabaseSeeder extends Seeder
             'is_admin' => true,
         ]);
 
+        User::factory()->create([
+            'name' => 'Musthafa Luthfi',
+            'email' => 'musthafaluthfi@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+            'remember_token' => Str::random(10),
+            'is_admin' => true,
+        ]);
+
         User::factory(100)->create();
         Category::factory(200)->create();
         Todo::factory(500)->create();
